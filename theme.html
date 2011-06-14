@@ -528,6 +528,18 @@
                 ) 
             }
     );
+    var text = $(".image.regular.rounded");
+    text.each(
+            function(){
+                $(this).find(".inner").each(
+                    function(){
+                        var txt = $(this)[0].innerHTML; 
+                        txt = txt.substring(0, 160) + "..."; 
+                        $(this)[0].innerHTML = txt;
+                    }
+                ) 
+            }
+    );
     </script>
     </body>
 </html>

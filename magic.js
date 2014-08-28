@@ -53,6 +53,24 @@ function init () {
 		$("#pages").removeClass("hide")
 	}
 	
+    var quotes = $(".image.quote.rounded");
+    quotes.each(function() {
+        $(this).find(".inner").each(function(){
+            var txt = $(this)[0].innerHTML;
+            txt = txt.substring(0, 160) + "...";
+            $(this)[0].innerHTML = txt;
+        })
+    });
+
+    var text = $(".image.regular.rounded");
+    text.each(function() {
+        $(this).find(".inner").each(function() {
+            var txt = $(this)[0].innerHTML;
+            txt = txt.substring(0, 160) + "...";
+            $(this)[0].innerHTML = txt;
+        })
+    });
+
 	add_credit()
 }
 //
